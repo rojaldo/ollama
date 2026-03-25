@@ -186,7 +186,7 @@ def process_message(message: str, history: list) -> str:
     
     # Primera llamada al modelo con herramientas disponibles
     response = client.chat(
-        model="llama3.2",
+        model="llama3.1",
         messages=messages,
         tools=tools,
         stream=False
