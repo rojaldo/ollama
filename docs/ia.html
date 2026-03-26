@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Inteligencia artificial</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Inteligencia artificial</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Índice de contenidos</div>
+<ul class="sectlevel1">
+<li><a href="#_introducción">1. Introducción</a>
+<ul class="sectlevel2">
+<li><a href="#_qué_es_realmente_la_inteligencia_artificial">1.1. ¿Qué es realmente la Inteligencia Artificial?</a>
+<ul class="sectlevel3">
+<li><a href="#_la_metáfora_del_aprendiz">1.1.1. La Metáfora del Aprendiz</a></li>
+</ul>
+</li>
+<li><a href="#_clasificación_de_la_ia_por_su_alcance">1.2. Clasificación de la IA por su alcance</a></li>
+</ul>
+</li>
+<li><a href="#_historia">2. Historia</a>
+<ul class="sectlevel2">
+<li><a href="#_evolución_del_pensamiento_sobre_la_ia">2.1. Evolución del Pensamiento sobre la IA</a></li>
+<li><a href="#_las_etapas_de_la_ia">2.2. Las Etapas de la IA</a></li>
+</ul>
+</li>
+<li><a href="#_hitos_en_la_historia_de_la_ia">3. Hitos en la Historia de la IA</a></li>
+<li><a href="#_primeras_técnicas_utilizadas_en_ia">4. Primeras Técnicas Utilizadas en IA</a>
+<ul class="sectlevel2">
+<li><a href="#_lógica_y_reglas_heurísticas">4.1. Lógica y Reglas Heurísticas</a></li>
+<li><a href="#_árboles_de_búsqueda_y_algoritmos_de_búsqueda">4.2. Árboles de Búsqueda y Algoritmos de Búsqueda</a></li>
+<li><a href="#_redes_neuronales_artificiales_ann_siglo_xx">4.3. Redes Neuronales Artificiales (ANN - Siglo XX)</a></li>
+<li><a href="#_sistemas_expertos">4.4. Sistemas Expertos</a></li>
+<li><a href="#_programación_simbólica_y_lisp">4.5. Programación Simbólica y Lisp</a></li>
+<li><a href="#_teoría_de_juegos_y_planificación">4.6. Teoría de Juegos y Planificación</a></li>
+<li><a href="#_aprendizaje_automático_simbólico">4.7. Aprendizaje Automático Simbólico</a></li>
+</ul>
+</li>
+<li><a href="#_diferencia_entre_machine_learning_y_deep_learning">5. Diferencia entre Machine Learning y Deep Learning</a>
+<ul class="sectlevel2">
+<li><a href="#_machine_learning_ml">5.1. Machine Learning (ML)</a></li>
+<li><a href="#_deep_learning_dl">5.2. Deep Learning (DL)</a></li>
+</ul>
+</li>
+<li><a href="#_tipos_de_redes_neuronales">6. Tipos de Redes Neuronales</a>
+<ul class="sectlevel2">
+<li><a href="#_redes_neuronales_artificiales_ann">6.1. Redes Neuronales Artificiales (ANN)</a>
+<ul class="sectlevel3">
+<li><a href="#_la_estructura_de_capas_conceptos_pedagógicos">6.1.1. La Estructura de Capas: Conceptos Pedagógicos</a></li>
+<li><a href="#_cómo_aprende_una_neurona">6.1.2. ¿Cómo "Aprende" una Neurona?</a></li>
+<li><a href="#_limitaciones_didácticas">6.1.3. Limitaciones Didácticas</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_convolucionales_cnn">6.2. Redes Neuronales Convolucionales (CNN)</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_la_mirada_fragmentada">6.2.1. Conceptos Pedagógicos: "La Mirada Fragmentada"</a></li>
+<li><a href="#_operaciones_clave">6.2.2. Operaciones Clave</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_recurrentes_rnn">6.3. Redes Neuronales Recurrentes (RNN)</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_la_memoria_del_presente">6.3.1. Conceptos Pedagógicos: "La Memoria del Presente"</a></li>
+<li><a href="#_el_talón_de_aquiles_el_olvido">6.3.2. El Talón de Aquiles: El Olvido</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_long_short_term_memory_lstm">6.4. Redes Neuronales Long Short-Term Memory (LSTM)</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_el_archivista_selectivo">6.4.1. Conceptos Pedagógicos: "El Archivista Selectivo"</a></li>
+<li><a href="#_por_qué_son_mejores">6.4.2. ¿Por qué son mejores?</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_generativas_adversarias_gan">6.5. Redes Neuronales Generativas Adversarias (GAN)</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_el_falsificador_y_el_detective">6.5.1. Conceptos Pedagógicos: "El Falsificador y el Detective"</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_autoencoder">6.6. Redes Neuronales Autoencoder</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_el_resumen_ejecutivo">6.6.1. Conceptos Pedagógicos: "El Resumen Ejecutivo"</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_residuales_resnet">6.7. Redes Neuronales Residuales (ResNet)</a></li>
+<li><a href="#_redes_neuronales_transformer">6.8. Redes Neuronales Transformer</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_clave">6.8.1. Conceptos Pedagógicos Clave</a></li>
+<li><a href="#_impacto_en_la_ia_moderna">6.8.2. Impacto en la IA Moderna</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_de_difusión_diffusion_models">6.9. Redes Neuronales de Difusión (Diffusion Models)</a>
+<ul class="sectlevel3">
+<li><a href="#_conceptos_pedagógicos_clave_2">6.9.1. Conceptos Pedagógicos Clave</a></li>
+<li><a href="#_comparativa_didáctica_gan_vs_difusión">6.9.2. Comparativa Didáctica: GAN vs Difusión</a></li>
+</ul>
+</li>
+<li><a href="#_redes_neuronales_de_aprendizaje_por_refuerzo_rl">6.10. Redes Neuronales de aprendizaje por refuerzo (RL)</a></li>
+</ul>
+</li>
+<li><a href="#_tipos_de_modelos_de_ia">7. Tipos de modelos de IA</a>
+<ul class="sectlevel2">
+<li><a href="#_modelos_de_aprendizaje_supervisado">7.1. Modelos de Aprendizaje Supervisado</a></li>
+<li><a href="#_modelos_de_aprendizaje_no_supervisado">7.2. Modelos de Aprendizaje No Supervisado</a></li>
+<li><a href="#_modelos_de_aprendizaje_por_refuerzo">7.3. Modelos de Aprendizaje por Refuerzo</a></li>
+<li><a href="#_modelos_de_aprendizaje_semi_supervisado">7.4. Modelos de Aprendizaje Semi-Supervisado</a></li>
+<li><a href="#_modelos_de_aprendizaje_por_transferencia">7.5. Modelos de Aprendizaje por Transferencia</a></li>
+</ul>
+</li>
+<li><a href="#_modelos_de_ia_pre_entrenados">8. Modelos de IA pre-entrenados</a></li>
+<li><a href="#_principales_librerías_de_inteligencia_artificial">9. Principales Librerías de Inteligencia Artificial</a>
+<ul class="sectlevel2">
+<li><a href="#_tensorflow">9.1. TensorFlow</a></li>
+<li><a href="#_pytorch">9.2. PyTorch</a></li>
+<li><a href="#_scikit_learn">9.3. Scikit-learn</a></li>
+<li><a href="#_keras">9.4. Keras</a></li>
+<li><a href="#_mxnet">9.5. MXNet</a></li>
+<li><a href="#_caffe">9.6. Caffe</a></li>
+<li><a href="#_opencv">9.7. OpenCV</a></li>
+<li><a href="#_nltk_natural_language_toolkit">9.8. NLTK (Natural Language Toolkit)</a></li>
+</ul>
+</li>
+<li><a href="#_enlaces_de_interés">10. Enlaces de Interés</a>
+<ul class="sectlevel2">
+<li><a href="#_conceptos_básicos_de_ia">10.1. Conceptos Básicos de IA</a></li>
+<li><a href="#_empresas_relevantes_en_ia">10.2. Empresas relevantes en IA</a></li>
+<li><a href="#_plataformas_y_comunidades">10.3. Plataformas y Comunidades</a></li>
+<li><a href="#_miscelánea">10.4. Miscelánea</a></li>
+</ul>
+</li>
+<li><a href="#_anexo_1_modelos_de_ia_pre_entrenados">11. Anexo 1: Modelos de IA Pre-entrenados</a>
+<ul class="sectlevel2">
+<li><a href="#_modelos_generativos_de_lenguaje">11.1. Modelos generativos de lenguaje</a></li>
+<li><a href="#_modelos_generativos_de_imágenes">11.2. Modelos generativos de imágenes</a></li>
+</ul>
+</li>
+<li><a href="#_anexo_2_hitos_y_logros_de_deepmind">12. Anexo 2: Hitos y Logros de DeepMind</a>
+<ul class="sectlevel2">
+<li><a href="#_alphago">12.1. AlphaGo</a></li>
+<li><a href="#_alphazero">12.2. AlphaZero</a></li>
+<li><a href="#_alphastar">12.3. AlphaStar</a></li>
+<li><a href="#_alphafold">12.4. AlphaFold</a></li>
+<li><a href="#_gnome">12.5. GNoMe</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_introducción">1. Introducción</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La inteligencia artificial (IA) es la inteligencia exhibida por máquinas. En ciencias de la computación, una máquina "inteligente" ideal es un agente racional flexible que percibe su entorno y lleva a cabo acciones que maximicen sus posibilidades de éxito en algún objetivo o tarea. Coloquialmente, el término inteligencia artificial se aplica cuando una máquina imita las funciones "cognitivas" que los humanos asocian con otras mentes humanas, como "aprender" y "resolver problemas".</p>
+</div>
+<div class="sect2">
+<h3 id="_qué_es_realmente_la_inteligencia_artificial">1.1. ¿Qué es realmente la Inteligencia Artificial?</h3>
+<div class="paragraph">
+<p>Para entender la IA desde una perspectiva pedagógica, podemos dividirla en tres dimensiones fundamentales que explican cómo una máquina "piensa":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Percepción</strong>: Es la capacidad de la máquina para recibir datos del mundo exterior y "entenderlos". Esto incluye desde leer un texto o escuchar una voz, hasta identificar objetos en una imagen. No es solo recibir datos, sino interpretarlos (ej: una cámara ve píxeles, la IA ve un "gato").</p>
+</li>
+<li>
+<p><strong>Razonamiento y Toma de Decisiones</strong>: Una vez que la máquina percibe la información, utiliza algoritmos para procesarla y decidir cuál es la mejor acción. Este proceso intenta imitar la lógica humana, evaluando probabilidades y posibles resultados para cumplir un objetivo (ej: un coche autónomo decide frenar porque percibe un peatón).</p>
+</li>
+<li>
+<p><strong>Aprendizaje (Adaptación)</strong>: Quizás el componente más importante. La IA moderna no se programa con reglas fijas para todo ("si pasa A, haz B"), sino que <strong>aprende de la experiencia</strong>. Al analizar miles de ejemplos, el sistema ajusta sus parámetros internos para mejorar su precisión con el tiempo.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_la_metáfora_del_aprendiz">1.1.1. La Metáfora del Aprendiz</h4>
+<div class="paragraph">
+<p>Podemos imaginar la IA como un aprendiz con una memoria fotográfica infinita pero sin sentido común inicial. Si le mostramos 10,000 fotos de manzanas, eventualmente entenderá el patrón de lo que es una manzana. Si luego le mostramos una pera, fallará, pero al corregirlo y darle el nuevo dato, su "modelo" se refinará.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clasificación_de_la_ia_por_su_alcance">1.2. Clasificación de la IA por su alcance</h3>
+<div class="paragraph">
+<p>Existen dos categorías principales que ayudan a entender el estado actual de la tecnología:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>IA Débil o Estrecha (ANI - Artificial Narrow Intelligence)</strong>: Es la IA que utilizamos hoy en día. Está diseñada para realizar una tarea específica de forma excelente (ej: jugar al ajedrez, traducir un texto, recomendar una película). No tiene conciencia ni puede realizar tareas fuera de su dominio.</p>
+</li>
+<li>
+<p><strong>IA Fuerte o General (AGI - Artificial General Intelligence)</strong>: Es un concepto teórico (aún no alcanzado) donde la máquina alcanzaría una inteligencia igual o superior a la humana en <strong>cualquier</strong> tarea cognitiva. Tendría la capacidad de razonar de forma abstracta, tener autoconciencia y aprender cualquier disciplina sin entrenamiento específico previo.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_historia">2. Historia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El término "inteligencia artificial" fue acuñado por John McCarthy en 1956, en la conferencia de Dartmouth College, Massachusetts. La inteligencia artificial es un campo de estudio multidisciplinario que busca, mediante el uso de modelos computacionales, el desarrollo de sistemas que puedan realizar tareas que, de momento, requieren inteligencia humana para ser realizadas. La inteligencia artificial es una rama de la informática que se ocupa de la creación de programas y mecanismos que pueden mostrar comportamientos que podrían considerarse inteligentes.</p>
+</div>
+<div class="sect2">
+<h3 id="_evolución_del_pensamiento_sobre_la_ia">2.1. Evolución del Pensamiento sobre la IA</h3>
+<div class="paragraph">
+<p>Para entender la historia de la IA de forma didáctica, debemos verla como una transición entre dos grandes filosofías:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IA Simbólica (Top-Down)</strong>: Dominó desde los años 50 hasta los 80. Se basaba en la idea de que la inteligencia consiste en manipular símbolos y reglas lógicas. Si podíamos escribir suficientes reglas <code>SI&#8230;&#8203; ENTONCES&#8230;&#8203;</code>, la máquina sería inteligente.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ejemplo</strong>: Los sistemas expertos médicos de los años 70.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>IA Conexionista (Bottom-Up)</strong>: Es el enfoque dominante actual. En lugar de darle reglas a la máquina, le damos una estructura inspirada en el cerebro (redes neuronales) y muchos datos para que ella misma descubra las reglas.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ejemplo</strong>: El reconocimiento de voz de tu teléfono.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_las_etapas_de_la_ia">2.2. Las Etapas de la IA</h3>
+<div class="paragraph">
+<p>La historia de la IA no ha sido un crecimiento lineal, sino que ha pasado por periodos de gran optimismo seguidos de "inviernos" por falta de resultados:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>El Nacimiento (1950-1956)</strong>: Alan Turing publica "¿Pueden las máquinas pensar?" y propone el famoso <strong>Test de Turing</strong>. Se establecen las bases matemáticas.</p>
+</li>
+<li>
+<p><strong>La Era Dorada del Optimismo (1956-1974)</strong>: Se crean los primeros programas capaces de resolver problemas de álgebra y demostrar teoremas geométricos. Se creía que en 20 años las máquinas harían cualquier trabajo humano.</p>
+</li>
+<li>
+<p><strong>El Primer Invierno de la IA (1974-1980)</strong>: El optimismo choca con la realidad del hardware limitado. El informe Lighthill en el Reino Unido critica la falta de avances reales, lo que provoca un recorte masivo de fondos.</p>
+</li>
+<li>
+<p><strong>El Auge de los Sistemas Expertos (1980-1987)</strong>: Las empresas empiezan a usar la IA para organizar la logística y diagnósticos médicos basados en reglas.</p>
+</li>
+<li>
+<p><strong>El Segundo Invierno (1987-1993)</strong>: Los sistemas expertos resultan ser difíciles de mantener y actualizar. El hardware especializado (máquinas Lisp) fracasa comercialmente.</p>
+</li>
+<li>
+<p><strong>La Revolución del Big Data y Deep Learning (2010-Presente)</strong>: Gracias a la potencia de las GPUs y la inmensa cantidad de datos en internet, las redes neuronales profundas demuestran una eficacia asombrosa, llevándonos a los LLMs actuales.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hitos_en_la_historia_de_la_ia">3. Hitos en la Historia de la IA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para comprender la evolución de la IA, es fundamental analizar los momentos en que las máquinas superaron barreras que se creían exclusivas del intelecto humano. Aquí detallamos los hitos más significativos:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>1956: El Nacimiento Oficial</strong>: John McCarthy acuña el término "inteligencia artificial" en la conferencia de Dartmouth College. Este evento reunió a los pioneros para discutir la posibilidad de que "cada aspecto del aprendizaje o cualquier otra característica de la inteligencia pueda, en principio, ser descrito con tanta precisión que una máquina pueda ser construida para simularlo".</p>
+</li>
+<li>
+<p><strong>1958: Lógica simbólica</strong>: Herbert Simon y Allen Newell desarrollan el "Logic Theorist", considerado el primer programa de IA, capaz de demostrar teoremas matemáticos complejos usando reglas lógicas.</p>
+</li>
+<li>
+<p><strong>1965: El primer Chatbot</strong>: Joseph Weizenbaum crea <strong>ELIZA</strong>, un programa de procesamiento de lenguaje natural que simulaba a un psicoterapeuta. Aunque funcionaba con simples reglas de sustitución, demostró lo fácil que era para los humanos proyectar inteligencia en las máquinas (el "Efecto ELIZA").</p>
+</li>
+<li>
+<p><strong>1997: El fin del ajedrez como reto supremo</strong>: <strong>Deep Blue</strong> de IBM derrota al campeón mundial Garry Kasparov. Fue un hito técnico en potencia de cálculo y árboles de búsqueda, demostrando que la "fuerza bruta" algorítmica podía vencer a la intuición humana en juegos de reglas fijas.</p>
+</li>
+<li>
+<p><strong>2011: Comprensión del contexto</strong>: <strong>IBM Watson</strong> gana el concurso "Jeopardy!", venciendo a los mejores humanos en una tarea que requiere entender juegos de palabras, ironías y conocimientos generales masivos.</p>
+</li>
+<li>
+<p><strong>2016: El triunfo de las Redes Neuronales</strong>: <strong>AlphaGo</strong> de DeepMind derrota a Lee Sedol en el juego Go. A diferencia del ajedrez, el Go tiene tantas posibilidades que no se puede vencer por fuerza bruta; AlphaGo aprendió "intuición" mediante el aprendizaje por refuerzo y redes neuronales.</p>
+</li>
+<li>
+<p><strong>2020: IA al servicio de la ciencia</strong>: <strong>AlphaFold</strong> resuelve el problema del plegamiento de proteínas, algo que los biólogos llevaban décadas intentando. Es el primer gran ejemplo de IA acelerando descubrimientos científicos fundamentales.</p>
+</li>
+<li>
+<p><strong>2021: La era de los Modelos de Lenguaje</strong>: Se lanza <strong>GPT-3</strong> de OpenAI. Con 175 mil millones de parámetros, demostró que escalar el tamaño de los modelos y los datos permitía capacidades emergentes como programar código, escribir poesía y razonar lógicamente sin entrenamiento específico para cada tarea.</p>
+</li>
+<li>
+<p><strong>2023: Ciencia de Materiales</strong>: <strong>GNoMe</strong> (DeepMind) predice estructuras estables para 2.2 millones de nuevos materiales, multiplicando por 10 el conocimiento humano acumulado en toda la historia de la ciencia de materiales.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_primeras_técnicas_utilizadas_en_ia">4. Primeras Técnicas Utilizadas en IA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para entender el estado actual de la IA, es vital comprender las técnicas "clásicas" que sentaron las bases. Estas técnicas se centraban más en la lógica humana explícita que en el aprendizaje de datos masivos.</p>
+</div>
+<div class="sect2">
+<h3 id="_lógica_y_reglas_heurísticas">4.1. Lógica y Reglas Heurísticas</h3>
+<div class="paragraph">
+<p>Se basan en representar el conocimiento mediante reglas formales. Una <strong>heurística</strong> es un "atajo mental" o regla práctica que ayuda a resolver problemas de manera más rápida que una búsqueda exhaustiva, aunque no garantice la solución óptima.
+* <strong>Concepto pedagógico</strong>: Es como darle a un ordenador un manual de instrucciones extremadamente detallado. Si el manual dice "Si hay nubes negras y viento frío, entonces hay un 80% de probabilidad de lluvia", el ordenador simplemente sigue esa instrucción lógica.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_árboles_de_búsqueda_y_algoritmos_de_búsqueda">4.2. Árboles de Búsqueda y Algoritmos de Búsqueda</h3>
+<div class="paragraph">
+<p>Consisten en visualizar un problema como un mapa de ramificaciones (nodos). Los algoritmos exploran estas ramas para encontrar el camino más corto o eficiente hacia una solución.
+* <strong>Búsqueda en Anchura (BFS)</strong>: Explora todos los vecinos inmediatos antes de profundizar. Es como buscar unas llaves perdidas revisando primero toda una habitación antes de pasar a la siguiente.
+* <strong>Búsqueda en Profundidad (DFS)</strong>: Sigue una rama hasta el final antes de retroceder. Es como intentar salir de un laberinto siguiendo una pared sin despegarse de ella.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_artificiales_ann_siglo_xx">4.3. Redes Neuronales Artificiales (ANN - Siglo XX)</h3>
+<div class="paragraph">
+<p>Aunque hoy son la base del Deep Learning, las primeras versiones (como el <strong>Perceptrón</strong> de 1958) eran extremadamente simples. Se inspiraban en la biología pero solo podían resolver problemas "linealmente separables" (problemas muy básicos de clasificación).
+* <strong>Limitación histórica</strong>: En 1969, un libro de Minsky y Papert demostró que estas redes no podían resolver problemas lógicos simples como la función XOR, lo que contribuyó al primer "Invierno de la IA".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sistemas_expertos">4.4. Sistemas Expertos</h3>
+<div class="paragraph">
+<p>Fueron la primera aplicación comercial exitosa de la IA. Consisten en una <strong>Base de Conocimientos</strong> (datos de expertos humanos) y un <strong>Motor de Inferencia</strong> (el software que aplica la lógica).
+* <strong>Ejemplo Clásico</strong>: <strong>MYCIN</strong> (1970s), un sistema diseñado para identificar bacterias que causan infecciones graves y recomendar antibióticos. A menudo superaba a los médicos novatos en precisión diagnóstica.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programación_simbólica_y_lisp">4.5. Programación Simbólica y Lisp</h3>
+<div class="paragraph">
+<p>Se diferencia de la programación tradicional en que manipula símbolos y conceptos en lugar de solo números. El lenguaje <strong>Lisp</strong> (List Processing), creado por John McCarthy, permitió crear programas que podían "modificarse a sí mismos", facilitando la creación de prototipos de inteligencia artificial.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_teoría_de_juegos_y_planificación">4.6. Teoría de Juegos y Planificación</h3>
+<div class="paragraph">
+<p>Se centra en agentes que deben tomar decisiones estratégicas contra oponentes. El algoritmo <strong>Minimax</strong>, por ejemplo, permite que un ordenador juegue al ajedrez intentando minimizar la pérdida máxima posible, asumiendo que el oponente también jugará de forma óptima.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aprendizaje_automático_simbólico">4.7. Aprendizaje Automático Simbólico</h3>
+<div class="paragraph">
+<p>Surgió del deseo de que la máquina no solo siguiera reglas, sino que las <strong>extrajera</strong>. El aprendizaje inductivo permitía que el sistema, al ver mil ejemplos de facturas aprobadas, generara por sí solo la regla: "Si el importe es menor de 100€, aprobar automáticamente".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diferencia_entre_machine_learning_y_deep_learning">5. Diferencia entre Machine Learning y Deep Learning</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_machine_learning_ml">5.1. Machine Learning (ML)</h3>
+<div class="paragraph">
+<p>El Machine Learning se refiere a un conjunto de técnicas que permiten a los ordenadores aprender patrones o realizar tareas específicas sin ser explícitamente programadas para ello.</p>
+</div>
+<div class="paragraph">
+<p>Se basa en algoritmos que pueden aprender de datos y hacer predicciones o tomar decisiones basadas en esos datos. Estos algoritmos pueden ser supervisados, no supervisados o de aprendizaje por refuerzo.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de técnicas de Machine Learning incluyen regresión lineal, árboles de decisión, máquinas de vectores de soporte (Support Vector Machines), k-means clustering, entre otros.</p>
+</div>
+<div class="paragraph">
+<p>En términos de arquitectura, los modelos de Machine Learning pueden tener una o unas pocas capas, pero no son tan profundas o complejas como las redes neuronales profundas utilizadas en Deep Learning.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deep_learning_dl">5.2. Deep Learning (DL)</h3>
+<div class="paragraph">
+<p>El Deep Learning es una subárea del Machine Learning que se centra en el uso de algoritmos basados en redes neuronales artificiales con múltiples capas (a menudo muchas capas) para modelar y procesar datos.</p>
+</div>
+<div class="paragraph">
+<p>Estas redes neuronales profundas están compuestas por múltiples capas de nodos interconectados que procesan la información de manera jerárquica, extrayendo características complejas de los datos de entrada.</p>
+</div>
+<div class="paragraph">
+<p>El Deep Learning se ha vuelto muy popular y efectivo en áreas como el reconocimiento de imágenes, el procesamiento del lenguaje natural, la visión por computadora y otros problemas de percepción.</p>
+</div>
+<div class="paragraph">
+<p>A diferencia de muchas técnicas de Machine Learning tradicionales, el Deep Learning requiere grandes cantidades de datos de entrenamiento y potencia computacional para ajustar correctamente los muchos parámetros de las redes neuronales profundas.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tipos_de_redes_neuronales">6. Tipos de Redes Neuronales</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_redes_neuronales_artificiales_ann">6.1. Redes Neuronales Artificiales (ANN)</h3>
+<div class="paragraph">
+<p>Son la forma más básica de redes neuronales, conocidas técnicamente como <em>Multi-Layer Perceptron</em> (MLP). Se basan en la conexión de unidades de procesamiento (neuronas) organizadas en capas jerárquicas.</p>
+</div>
+<div class="sect3">
+<h4 id="_la_estructura_de_capas_conceptos_pedagógicos">6.1.1. La Estructura de Capas: Conceptos Pedagógicos</h4>
+<div class="paragraph">
+<p>Para entender cómo fluye la información, podemos visualizar el modelo como un sistema de filtrado y reconocimiento:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Capa de Entrada (Input Layer)</strong>: Es la interfaz con el mundo exterior. Cada neurona aquí representa una característica del dato original.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Ejemplo</em>: Si clasificamos casas, una neurona recibe el "número de habitaciones", otra los "metros cuadrados" y otra la "antigüedad".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Capas Ocultas (Hidden Layers)</strong>: Aquí es donde reside la "inteligencia". Las neuronas en estas capas no ven los datos directamente, sino combinaciones de los datos previos. Su función es encontrar <strong>patrones abstractos</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Ejemplo</em>: Una capa oculta puede combinar "antigüedad" y "metros cuadrados" para inferir el "estado de conservación", un concepto que no estaba explícito en la entrada.</p>
+</li>
+<li>
+<p><strong>Profundidad</strong>: Cuantas más capas ocultas tiene una red, más complejo es el conocimiento que puede extraer (de ahí el término <em>Deep</em> Learning).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Capa de Salida (Output Layer)</strong>: Traduce los patrones internos en una respuesta útil.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Ejemplo</em>: El precio estimado de la casa o una clasificación (ej: "Es una mansión" vs "Es un piso").</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cómo_aprende_una_neurona">6.1.2. ¿Cómo "Aprende" una Neurona?</h4>
+<div class="paragraph">
+<p>Cada conexión entre neuronas tiene un <strong>Peso (Weight)</strong> asociado. El aprendizaje consiste en ajustar estos pesos:
+1.  <strong>Propagación hacia adelante (Forward Pass)</strong>: Los datos viajan de la entrada a la salida. El modelo hace una "predicción" inicial (probablemente errónea).
+2.  <strong>Cálculo del Error (Loss Function)</strong>: Comparamos la predicción con la realidad.
+3.  <strong>Retropropagación (Backpropagation)</strong>: El error se envía hacia atrás por la red. Los pesos que más contribuyeron al error se ajustan ligeramente mediante un algoritmo llamado <strong>Gradiente Descendente</strong>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_limitaciones_didácticas">6.1.3. Limitaciones Didácticas</h4>
+<div class="paragraph">
+<p>Las ANN son potentes para datos tabulares (hojas de cálculo), pero ineficientes para datos espaciales (imágenes) o secuenciales (texto), lo que llevó a la creación de arquitecturas especializadas como las CNN y RNN.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_convolucionales_cnn">6.2. Redes Neuronales Convolucionales (CNN)</h3>
+<div class="paragraph">
+<p>Especialmente diseñadas para procesar datos con estructura de cuadrícula, como imágenes. Utilizan operaciones de convolución para extraer características importantes de los datos de entrada.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_la_mirada_fragmentada">6.2.1. Conceptos Pedagógicos: "La Mirada Fragmentada"</h4>
+<div class="paragraph">
+<p>Para entender cómo una CNN "ve" una imagen, debemos olvidar cómo la vemos los humanos (como un todo) y pensar en cómo la procesa un ordenador (como una matriz de números).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Filtros (Kernels)</strong>: Imagina que miras una fotografía a través de una pequeña mirilla cuadrada que solo deja ver un área de 3x3 píxeles. Esta mirilla es el <strong>filtro</strong>. El filtro se desliza por toda la imagen buscando patrones específicos: líneas verticales, bordes horizontales o curvas.</p>
+</li>
+<li>
+<p><strong>Mapas de Características</strong>: Cada vez que el filtro encuentra lo que busca (por ejemplo, una línea), "se ilumina" y genera un nuevo mapa.</p>
+</li>
+<li>
+<p><strong>Jerarquía de Reconocimiento</strong>:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Primeras Capas</strong>: Detectan cosas simples como bordes y colores.</p>
+</li>
+<li>
+<p><strong>Capas Intermedias</strong>: Combinan los bordes para detectar formas (círculos, cuadrados).</p>
+</li>
+<li>
+<p><strong>Capas Profundas</strong>: Combinan formas para detectar objetos complejos (ojos, ruedas, orejas de gato).</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_operaciones_clave">6.2.2. Operaciones Clave</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Convolución</strong>: Es el acto de deslizar el filtro y calcular la coincidencia. Es lo que permite la <strong>invariancia de traslación</strong>: la IA reconocerá un gato tanto si está en la esquina superior izquierda de la foto como en el centro.</p>
+</li>
+<li>
+<p><strong>Pooling (Submuestreo)</strong>: Es una técnica de compresión. Reduce el tamaño de la imagen quedándose solo con la información más importante (el "resumen" de cada zona), lo que hace al modelo más rápido y menos sensible a pequeños ruidos.</p>
+</li>
+<li>
+<p><strong>Capa Totalmente Conectada (Flattening)</strong>: Al final del proceso, todas las características extraídas se "estiran" en una fila de números que se pasan a una ANN clásica para que tome la decisión final: "¿Es un perro o un gato?".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Las CNN son capaces de capturar patrones espaciales y de escala en las imágenes, lo que las hace muy efectivas en tareas de visión artificial, como la clasificación de imágenes, la detección de objetos y la segmentación semántica.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_recurrentes_rnn">6.3. Redes Neuronales Recurrentes (RNN)</h3>
+<div class="paragraph">
+<p>Son adecuadas para datos de secuencia, como texto o series temporales. Tienen conexiones de retroalimentación que les permiten mantener y usar información a lo largo del tiempo.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_la_memoria_del_presente">6.3.1. Conceptos Pedagógicos: "La Memoria del Presente"</h4>
+<div class="paragraph">
+<p>Mientras que las ANN ven cada entrada como un evento aislado (sin pasado ni futuro), las RNN introducen el concepto de <strong>tiempo</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>La Bucle de Retroalimentación</strong>: Imagina que estás leyendo un libro. Para entender la quinta palabra de una frase, debes recordar las cuatro anteriores. Una RNN tiene una memoria interna que "pasa" el estado actual al siguiente paso de tiempo.</p>
+</li>
+<li>
+<p><strong>Secuencia de Pensamiento</strong>: El modelo procesa la información en orden (palabra por palabra, segundo a segundo). Es como una cinta transportadora que se va llenando de contexto a medida que avanza.</p>
+</li>
+<li>
+<p><strong>Aplicación Natural</strong>: Son ideales para el lenguaje humano (donde el orden de las palabras cambia el significado) o para predecir el mercado de valores basándose en días pasados.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_el_talón_de_aquiles_el_olvido">6.3.2. El Talón de Aquiles: El Olvido</h4>
+<div class="paragraph">
+<p>El problema principal de las RNN es el <strong>desvanecimiento del gradiente</strong> (<em>Vanishing Gradient</em>).
+* <strong>Metáfora</strong>: Es como jugar al teléfono escacharrado (teléfono roto). Al llegar a la palabra 50 de una frase, el modelo apenas "recuerda" la primera. La señal del error se vuelve tan débil al viajar hacia atrás por la secuencia que la red deja de aprender relaciones a largo plazo.</p>
+</div>
+<div class="paragraph">
+<p>Originalmente, las RNN fueron útiles en tareas como el procesamiento del lenguaje natural, la traducción automática, la generación de texto y la predicción de series temporales. En la actualidad, han sido reemplazadas en muchos casos por las redes neuronales LSTM y transformers.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_long_short_term_memory_lstm">6.4. Redes Neuronales Long Short-Term Memory (LSTM)</h3>
+<div class="paragraph">
+<p>Una variante de las RNN diseñada para manejar problemas de desvanecimiento del gradiente. Las LSTM tienen unidades de memoria especiales que pueden aprender y recordar a largo plazo.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_el_archivista_selectivo">6.4.1. Conceptos Pedagógicos: "El Archivista Selectivo"</h4>
+<div class="paragraph">
+<p>Si una RNN convencional es como una persona que intenta recordar una frase larga pero se olvida del principio, una LSTM es como un <strong>archivista</strong> con un sistema de carpetas muy eficiente.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>La Celda de Memoria (Cell State)</strong>: Es como una cinta transportadora que recorre toda la secuencia. En ella se guarda la información importante a largo plazo.</p>
+</li>
+<li>
+<p><strong>Las "Puertas" (Gates)</strong>: Son los mecanismos que deciden qué entra y qué sale de la memoria:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Puerta de Olvido (Forget Gate)</strong>: Decide qué información ya no es útil y debe borrarse. <em>Ejemplo</em>: Si el texto cambia de hablar de un "niño" a una "niña", la puerta de olvido borra el género masculino de la memoria.</p>
+</li>
+<li>
+<p><strong>Puerta de Entrada (Input Gate)</strong>: Decide qué nueva información merece ser guardada en la cinta transportadora.</p>
+</li>
+<li>
+<p><strong>Puerta de Salida (Output Gate)</strong>: Decide qué parte de la memoria interna se enviará a la siguiente neurona.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_por_qué_son_mejores">6.4.2. ¿Por qué son mejores?</h4>
+<div class="paragraph">
+<p>Gracias a estas puertas, las LSTM pueden mantener información relevante durante miles de pasos (palabras, segundos, días), resolviendo el problema del "olvido" de las RNN básicas.</p>
+</div>
+<div class="paragraph">
+<p>Las LSTM son ampliamente utilizadas en tareas de procesamiento del lenguaje natural, como la traducción automática, la generación de texto y la generación de subtítulos de imágenes.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_generativas_adversarias_gan">6.5. Redes Neuronales Generativas Adversarias (GAN)</h3>
+<div class="paragraph">
+<p>Consisten en dos redes neuronales, un generador y un discriminador, que compiten entre sí. El generador crea datos nuevos que intentan pasar como datos reales, mientras que el discriminador intenta distinguir entre los datos reales y los generados.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_el_falsificador_y_el_detective">6.5.1. Conceptos Pedagógicos: "El Falsificador y el Detective"</h4>
+<div class="paragraph">
+<p>La magia de las GAN reside en el <strong>entrenamiento adversarial</strong> (por competencia). Podemos imaginarlo como un duelo constante:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>El Generador (El Falsificador)</strong>: Su único objetivo es crear billetes (o caras, o cuadros) que parezcan reales. Empieza creando ruido aleatorio, pero mejora con cada intento.</p>
+</li>
+<li>
+<p><strong>El Discriminador (El Detective)</strong>: Recibe tanto billetes reales como las falsificaciones del generador. Su trabajo es aprender a distinguirlos.</p>
+</li>
+<li>
+<p><strong>El Bucle de Mejora</strong>:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Si el Detective pilla al Falsificador, el Falsificador aprende de sus errores para mejorar la siguiente versión.</p>
+</li>
+<li>
+<p>Si el Falsificador engaña al Detective, el Detective debe esforzarse más por encontrar nuevos detalles que revelen la mentira.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Al final del proceso, el Generador se vuelve tan experto que es capaz de crear imágenes de personas que no existen pero que son indistinguibles de una fotografía real.</p>
+</div>
+<div class="paragraph">
+<p>Las GAN supusieron un gran avance en la generación de datos realistas y se utilizan en tareas de generación de imágenes, video y audio, así como en la mejora de la calidad de las imágenes y la generación de datos sintéticos.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_autoencoder">6.6. Redes Neuronales Autoencoder</h3>
+<div class="paragraph">
+<p>Utilizadas para el aprendizaje no supervisado, comprimen los datos de entrada en un espacio de representación más pequeño y luego los reconstruyen. Pueden ser utilizadas para la reducción de dimensionalidad, la generación de datos y la detección de anomalías.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_el_resumen_ejecutivo">6.6.1. Conceptos Pedagógicos: "El Resumen Ejecutivo"</h4>
+<div class="paragraph">
+<p>Un Autoencoder es como un traductor que debe pasar un libro entero a un post-it y luego, basándose solo en ese post-it, reconstruir el libro original.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Encoder (Compresión)</strong>: Toma una entrada compleja (ej: una foto de 1MB) y la reduce a un pequeño vector de números (ej: 100 números). Esta versión comprimida se llama <strong>Espacio Latente (Bottleneck)</strong>.</p>
+</li>
+<li>
+<p><strong>Decoder (Reconstrucción)</strong>: Intenta convertir esos 100 números de nuevo en la imagen original de 1MB.</p>
+</li>
+<li>
+<p><strong>¿Para qué sirve?</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Eliminación de Ruido</strong>: Si le das una imagen con nieve, el modelo solo guardará lo importante en el "post-it", ignorando el ruido aleatorio al reconstruir.</p>
+</li>
+<li>
+<p><strong>Detección de Anomalías</strong>: Si el modelo está entrenado para comprimir fotos de tornillos perfectos, cuando vea un tornillo roto llegará al "post-it" pero no sabrá reconstruirlo bien. Esa diferencia delata que algo falla.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_residuales_resnet">6.7. Redes Neuronales Residuales (ResNet)</h3>
+<div class="paragraph">
+<p>Introducen conexiones de "salto" que permiten que las señales de entrada y salida se agreguen directamente entre capas. Esto facilita el entrenamiento de redes más profundas al evitar problemas de desvanecimiento del gradiente.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_transformer">6.8. Redes Neuronales Transformer</h3>
+<div class="paragraph">
+<p>Introducen un mecanismo de atención que permite a las redes neuronales procesar secuencias de datos de manera paralela y capturar relaciones a largo plazo entre elementos de la secuencia.</p>
+</div>
+<div class="paragraph">
+<p>Los transformers han demostrado ser muy efectivos en tareas de procesamiento del lenguaje natural, como la traducción automática, la generación de texto y la respuesta a preguntas.</p>
+</div>
+<div class="paragraph">
+<p>La gran ventaja de los transformers es su capacidad para capturar relaciones a largo plazo en las secuencias de datos, y permiten ser entrenados de manera más escalable y eficiente que modelos anteriores.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_clave">6.8.1. Conceptos Pedagógicos Clave</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mecanismo de Auto-Atención (Self-Attention)</strong>: Es el "corazón" del Transformer. A diferencia de las redes anteriores que leían palabra por palabra (de izquierda a derecha), la auto-atención permite que cada palabra en una frase "mire" a todas las demás para entender su contexto. Por ejemplo, en la frase "El banco estaba cerrado porque no tenía dinero", el modelo usa la atención para saber que "banco" se refiere a una institución financiera y no a un mueble de parque.</p>
+</li>
+<li>
+<p><strong>Procesamiento en Paralelo</strong>: A diferencia de las RNN (Recurrentes), los Transformers no necesitan procesar el texto en orden secuencial. Pueden analizar todas las palabras de un párrafo simultáneamente, lo que permite aprovechar la potencia de las GPUs modernas y reducir drásticamente el tiempo de entrenamiento.</p>
+</li>
+<li>
+<p><strong>Codificación Posicional (Positional Encoding)</strong>: Como el modelo procesa todo a la vez, pierde el sentido del orden. Para solucionar esto, se añade una señal matemática a cada palabra que indica su posición exacta en la frase, permitiendo que el modelo distinga entre "El perro muerde al hombre" y "El hombre muerde al perro".</p>
+</li>
+<li>
+<p><strong>Arquitectura Encoder-Decoder</strong>: Originalmente diseñados con dos partes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Encoder</strong>: Comprime la información de entrada en una representación numérica rica en significado.</p>
+</li>
+<li>
+<p><strong>Decoder</strong>: Utiliza esa representación para generar una secuencia de salida (como una traducción).</p>
+</li>
+<li>
+<p><em>Nota</em>: Modelos modernos como GPT usan solo la parte del Decoder, mientras que otros como BERT usan solo el Encoder.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_impacto_en_la_ia_moderna">6.8.2. Impacto en la IA Moderna</h4>
+<div class="paragraph">
+<p>El artículo fundamental de 2017, <strong>"Attention Is All You Need"</strong>, marcó el inicio de la era de los Grandes Modelos de Lenguaje (LLMs). Gracias a esta arquitectura, hemos pasado de traductores que cometían errores gramaticales básicos a asistentes capaces de razonar, programar y mantener conversaciones complejas.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_de_difusión_diffusion_models">6.9. Redes Neuronales de Difusión (Diffusion Models)</h3>
+<div class="paragraph">
+<p>Son un tipo de red neuronal generativa que modela la distribución de probabilidad de los datos de entrada. Han revolucionado la generación de imágenes y medios sintéticos, superando en muchos casos a las GAN en calidad y estabilidad.</p>
+</div>
+<div class="sect3">
+<h4 id="_conceptos_pedagógicos_clave_2">6.9.1. Conceptos Pedagógicos Clave</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>El Proceso de Difusión</strong>: Imagina que dejas caer una gota de tinta en un vaso de agua. Al principio está concentrada, pero con el tiempo se esparce hasta que el agua es solo un ruido uniforme de color. Los modelos de difusión funcionan igual:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Difusión Directa (Forward)</strong>: Toman una imagen clara y le añaden "ruido" (píxeles aleatorios) paso a paso hasta que la imagen es irreconocible.</p>
+</li>
+<li>
+<p><strong>Difusión Inversa (Reverse)</strong>: Aquí es donde ocurre la "magia". El modelo aprende a deshacer el camino, prediciendo cómo quitar el ruido paso a paso para recuperar la imagen original.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Generación desde el Caos</strong>: Para crear algo nuevo, le damos al modelo un bloque de ruido aleatorio puro. El modelo aplica lo aprendido en el proceso inverso para ir "esculpiendo" una imagen coherente a partir de ese ruido.</p>
+</li>
+<li>
+<p><strong>Guiado por Texto (Conditioning)</strong>: En modelos como <em>Stable Diffusion</em> o <em>DALL-E</em>, el proceso de quitar ruido está guiado por una descripción textual. El modelo asegura que los píxeles que va recuperando coincidan con el significado del texto (ej: "un astronauta montando a caballo").</p>
+</li>
+<li>
+<p><strong>Espacio Latente (Latent Diffusion)</strong>: Para ahorrar potencia computacional, los modelos modernos no trabajan con píxeles gigantes, sino con una versión comprimida y matemática de la imagen llamada "espacio latente". Esto permite generar imágenes de alta resolución en segundos en lugar de horas.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_comparativa_didáctica_gan_vs_difusión">6.9.2. Comparativa Didáctica: GAN vs Difusión</h4>
+<div class="paragraph">
+<p>Mientras que una <strong>GAN</strong> es como un falsificador intentando engañar a un policía (competencia), un <strong>Modelo de Difusión</strong> es como un escultor que ve una figura dentro de un bloque de piedra (ruido) y va quitando lo que sobra hasta revelarla.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redes_neuronales_de_aprendizaje_por_refuerzo_rl">6.10. Redes Neuronales de aprendizaje por refuerzo (RL)</h3>
+<div class="paragraph">
+<p>Se utilizan para entrenar agentes inteligentes que toman decisiones secuenciales en entornos dinámicos. Los agentes aprenden a maximizar una recompensa acumulada a lo largo del tiempo.</p>
+</div>
+<div class="paragraph">
+<p>El campo del aprendizaje por refuerzo ha experimentado un gran avance en los últimos años, con el desarrollo de algoritmos como DQN, A2C, PPO y DDPG, que han demostrado un rendimiento sobresaliente en tareas de control y juegos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tipos_de_modelos_de_ia">7. Tipos de modelos de IA</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_modelos_de_aprendizaje_supervisado">7.1. Modelos de Aprendizaje Supervisado</h3>
+<div class="paragraph">
+<p>Los modelos de aprendizaje supervisado se entrenan con ejemplos de entrada y salida emparejados. El objetivo es aprender una función que mapee las entradas a las salidas.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de modelos de aprendizaje supervisado incluyen regresión lineal, regresión logística, máquinas de vectores de soporte (SVM), árboles de decisión, bosques aleatorios, redes neuronales, entre otros.</p>
+</div>
+<div class="paragraph">
+<p>Estos modelos se utilizan en tareas como la clasificación, la regresión, la detección de anomalías y la generación de texto.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelos_de_aprendizaje_no_supervisado">7.2. Modelos de Aprendizaje No Supervisado</h3>
+<div class="paragraph">
+<p>Los modelos de aprendizaje no supervisado se entrenan con datos de entrada sin etiquetar. El objetivo es encontrar patrones, estructuras o relaciones interesantes en los datos.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de modelos de aprendizaje no supervisado incluyen clustering, reducción de dimensionalidad, reglas de asociación y aprendizaje de densidad.</p>
+</div>
+<div class="paragraph">
+<p>Estos modelos se utilizan en tareas como la segmentación de clientes, la detección de fraudes, la recomendación de productos y la visualización de datos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelos_de_aprendizaje_por_refuerzo">7.3. Modelos de Aprendizaje por Refuerzo</h3>
+<div class="paragraph">
+<p>Los modelos de aprendizaje por refuerzo se entrenan con un sistema de recompensa y castigo. El objetivo es aprender una política que maximice la recompensa acumulada a lo largo del tiempo.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de modelos de aprendizaje por refuerzo incluyen Q-learning, SARSA, DQN, A2C, PPO y DDPG.</p>
+</div>
+<div class="paragraph">
+<p>Estos modelos se utilizan en tareas como el control de robots, los juegos, la optimización de carteras y la toma de decisiones secuenciales.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelos_de_aprendizaje_semi_supervisado">7.4. Modelos de Aprendizaje Semi-Supervisado</h3>
+<div class="paragraph">
+<p>Los modelos de aprendizaje semi-supervisado se entrenan con una combinación de datos etiquetados y no etiquetados. El objetivo es aprovechar la información no etiquetada para mejorar el rendimiento del modelo.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de modelos de aprendizaje semi-supervisado incluyen la propagación de etiquetas, la autoetiquetación y la regularización de consistencia.</p>
+</div>
+<div class="paragraph">
+<p>Estos modelos se utilizan en tareas donde es costoso o difícil obtener grandes cantidades de datos etiquetados.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelos_de_aprendizaje_por_transferencia">7.5. Modelos de Aprendizaje por Transferencia</h3>
+<div class="paragraph">
+<p>Los modelos de aprendizaje por transferencia se entrenan en un dominio fuente y se aplican en un dominio objetivo relacionado. El objetivo es transferir el conocimiento aprendido en el dominio fuente al dominio objetivo.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplos de modelos de aprendizaje por transferencia incluyen fine-tuning, pre-entrenamiento y adaptación de dominio.</p>
+</div>
+<div class="paragraph">
+<p>Los modelos de aprendizaje por transferencia se utilizan en tareas donde hay poca cantidad de datos en el dominio objetivo o donde el entrenamiento desde cero es costoso.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modelos_de_ia_pre_entrenados">8. Modelos de IA pre-entrenados</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Los modelos de IA pre-entrenados son modelos que han sido entrenados en grandes conjuntos de datos y que se pueden utilizar directamente o ajustar para tareas específicas.</p>
+</div>
+<div class="ulist">
+<div class="title">Conceptos Relacionados con Modelos de IA pre-entrenados</div>
+<ul>
+<li>
+<p><strong>Checkpoints (Puntos de control)</strong>: Instantáneas guardadas del estado del modelo durante el proceso de entrenamiento en IA. Se utilizan para reanudar el entrenamiento o para realizar inferencias. En un checkpoint se guardan los pesos, los hiperparámetros y otros datos del modelo.</p>
+</li>
+<li>
+<p><strong>Transfer Learning (Aprendizaje por transferencia)</strong>: Técnica en la que un modelo entrenado para una tarea específica se reutiliza como punto de partida para entrenar otro modelo para una tarea relacionada o diferente.</p>
+</li>
+<li>
+<p><strong>Hypernetworks (Hiperredes)</strong>: Clase de modelos de redes neuronales utilizados para generar pesos o parámetros de otras redes neuronales. Se utilizan para aprender representaciones de datos o para generar arquitecturas de redes neuronales.</p>
+</li>
+<li>
+<p><strong>Data Augmentation (Aumento de datos)</strong>: Técnica para aumentar la cantidad y diversidad de datos de entrenamiento mediante transformaciones aleatorias o controladas.</p>
+</li>
+<li>
+<p><strong>Adversarial Training (Entrenamiento adversarial)</strong>: Técnica de entrenamiento para modelos generativos que implica entrenar simultáneamente un generador y un discriminador.</p>
+</li>
+<li>
+<p><strong>Self-Attention (Autoatención)</strong>: Mecanismo utilizado en arquitecturas de redes neuronales, especialmente en modelos de lenguaje como Transformers.</p>
+</li>
+<li>
+<p><strong>Latent Space (Espacio latente)</strong>: Espacio de representación de características latentes aprendidas por un modelo generativo.</p>
+</li>
+<li>
+<p><strong>Fine-Tuning (Ajuste fino)</strong>: Técnica de ajuste de un modelo pre-entrenado en un conjunto de datos específico para mejorar su rendimiento en una tarea específica.</p>
+</li>
+<li>
+<p><strong>Inference (Inferencia)</strong>: Proceso de utilizar un modelo entrenado para hacer predicciones sobre nuevos datos de entrada.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principales_librerías_de_inteligencia_artificial">9. Principales Librerías de Inteligencia Artificial</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tensorflow">9.1. TensorFlow</h3>
+<div class="paragraph">
+<p>Desarrollada por Google, TensorFlow es una de las librerías más populares para construir y entrenar modelos de IA y DL.</p>
+</div>
+<div class="paragraph">
+<p>La historia de TensorFlow comenzó en 2011 cuando el equipo de Google Brain comenzó a trabajar en una biblioteca de aprendizaje automático de código abierto llamada DistBelief. En 2015, Google lanzó TensorFlow como sucesor de DistBelief, y desde entonces se ha convertido en una de las librerías de IA y DL más utilizadas en la industria. La librería Keras, que se ha integrado en TensorFlow, proporciona una API de alto nivel para la construcción de redes neuronales.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.tensorflow.org">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytorch">9.2. PyTorch</h3>
+<div class="paragraph">
+<p>Desarrollada por Facebook, PyTorch es otra librería de IA y DL de código abierto muy popular.</p>
+</div>
+<div class="paragraph">
+<p>La historia de PyTorch comenzó en 2016 cuando Facebook lanzó PyTorch como una alternativa a TensorFlow. PyTorch se ha convertido en una de las librerías de IA y DL más utilizadas en la industria, especialmente en la investigación y el desarrollo de prototipos.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://pytorch.org/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scikit_learn">9.3. Scikit-learn</h3>
+<div class="paragraph">
+<p>Scikit-learn es una librería de aprendizaje automático en Python que proporciona una amplia variedad de algoritmos de aprendizaje supervisado y no supervisado.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://scikit-learn.org/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keras">9.4. Keras</h3>
+<div class="paragraph">
+<p>Keras es una librería de alto nivel para la construcción de redes neuronales en Python que puede ejecutarse sobre TensorFlow, Theano o Microsoft Cognitive Toolkit (CNTK).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://keras.io/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mxnet">9.5. MXNet</h3>
+<div class="paragraph">
+<p>Desarrollada por Apache, MXNet es otra librería de código abierto para el desarrollo de modelos de IA y DL.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://mxnet.apache.org/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caffe">9.6. Caffe</h3>
+<div class="paragraph">
+<p>Caffe es una librería de código abierto especialmente diseñada para la visión por computadora y la implementación eficiente de modelos de CNN.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://caffe.berkeleyvision.org/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opencv">9.7. OpenCV</h3>
+<div class="paragraph">
+<p>OpenCV (Open Source Computer Vision Library) es una librería de visión por computadora de código abierto que incluye una amplia gama de algoritmos y herramientas.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://opencv.org/">Enlace</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nltk_natural_language_toolkit">9.8. NLTK (Natural Language Toolkit)</h3>
+<div class="paragraph">
+<p>NLTK es una librería de Python para el procesamiento del lenguaje natural que proporciona herramientas y recursos para el análisis de texto.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.nltk.org/">Enlace</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enlaces_de_interés">10. Enlaces de Interés</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_conceptos_básicos_de_ia">10.1. Conceptos Básicos de IA</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://es.wikipedia.org/wiki/Inteligencia_artificial">Inteligencia Artificial en Wikipedia</a></p>
+</li>
+<li>
+<p><a href="https://www.ibm.com/cloud/learn/what-is-artificial-intelligence">Historia de la Inteligencia Artificial</a></p>
+</li>
+<li>
+<p><a href="https://playground.tensorflow.org/">Tensorflow Playground</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_empresas_relevantes_en_ia">10.2. Empresas relevantes en IA</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://openai.com/">OpenAI</a></p>
+</li>
+<li>
+<p><a href="https://deepmind.com/">DeepMind</a></p>
+</li>
+<li>
+<p><a href="https://www.ibm.com/watson">IBM Watson</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plataformas_y_comunidades">10.3. Plataformas y Comunidades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://huggingface.co/">Hugging Face</a></p>
+</li>
+<li>
+<p><a href="https://www.kaggle.com/">Kaggle</a></p>
+</li>
+<li>
+<p><a href="https://ollama.com/">Ollama</a></p>
+</li>
+<li>
+<p><a href="https://civitai.com/">Civit AI</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miscelánea">10.4. Miscelánea</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">Open LLM Leaderboard</a></p>
+</li>
+<li>
+<p><a href="https://www.kdnuggets.com/">KDnuggets</a></p>
+</li>
+<li>
+<p><a href="https://www.arxiv.org/">arXiv</a></p>
+</li>
+<li>
+<p><a href="https://www.paperswithcode.com/">Papers with Code</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anexo_1_modelos_de_ia_pre_entrenados">11. Anexo 1: Modelos de IA Pre-entrenados</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_modelos_generativos_de_lenguaje">11.1. Modelos generativos de lenguaje</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GPT-X (Generative Pre-trained Transformer X):</strong> Un modelo de lenguaje generativo desarrollado por OpenAI que ha demostrado un rendimiento sobresaliente en una amplia variedad de tareas de procesamiento del lenguaje natural.</p>
+</li>
+<li>
+<p><strong><a href="https://llama.meta.com/">Llama</a>:</strong> Un modelo de lenguaje generativo desarrollado por Meta que ha demostrado un rendimiento competitivo en tareas de generación de texto y conversación. A partir de este modelo, se han desarrollado multitud de variantes y modelos especializados ([llava], alpaca, llamacode, etc.).</p>
+</li>
+<li>
+<p><strong><a href="https://ollama.com/library/gemma">gemma</a>:</strong> Un modelo de lenguaje generativo desarrollado por Google (Deepmind).</p>
+</li>
+<li>
+<p><strong><a href="https://docs.mistral.ai/">Mistral</a>:</strong> Un modelo de lenguaje generativo desarrollado por Mistral. De Mistral han surgido variantes como Mixtral, Dolphin-Mixtral, etc.</p>
+</li>
+<li>
+<p><strong><a href="https://github.com/QwenLM/Qwen">Qwen</a>:</strong> Un modelo de lenguaje generativo desarrollado por Alibaba.</p>
+</li>
+<li>
+<p><strong><a href="https://llava-vl.github.io/">Llava</a>:</strong> Un modelo de lenguaje multimodal que combina texto y visión para tareas de detección de objetos en imágenes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelos_generativos_de_imágenes">11.2. Modelos generativos de imágenes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><a href="https://openai.com/dall-e-2/">DALL-E 2</a>:</strong> Un modelo generativo de imágenes desarrollado por OpenAI que puede generar imágenes a partir de descripciones textuales.</p>
+</li>
+<li>
+<p><strong><a href="https://www.midjourney.com/home">MidJourney</a>:</strong> Un modelo generativo de imágenes desarrollado por MidJourney que puede generar imágenes realistas con discord como plataforma.</p>
+</li>
+<li>
+<p><strong><a href="https://stability.ai/stable-image">Stable Diffusion</a>:</strong> Un modelo generativo de imágenes desarrollado por OpenAI que puede generar imágenes de alta calidad a partir de descripciones textuales.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anexo_2_hitos_y_logros_de_deepmind">12. Anexo 2: Hitos y Logros de DeepMind</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deepmind es una empresa de inteligencia artificial con sede en Londres, fue fundada en 2010 y adquirida por Google en 2014. DeepMind ha logrado varios hitos y avances significativos en el campo de la inteligencia artificial, incluyendo:</p>
+</div>
+<div class="sect2">
+<h3 id="_alphago">12.1. AlphaGo</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>En 2016, AlphaGo, desarrollado por DeepMind, derrotó al campeón mundial de Go, Lee Sedol, en una serie de juegos históricos. AlphaGo demostró la capacidad de las redes neuronales para dominar un juego complejo de estrategia, superando el nivel humano.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/WXuK6gekU1Y">AlphaGo - The Movie</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alphazero">12.2. AlphaZero</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>En 2017, DeepMind pReino Unido, que ha logrado varios hitos y avances significativos en el campo de la IA. A continuación se presentan algunos de los logros más destacados de DeepMind:resentó AlphaZero, un sistema de inteligencia artificial capaz de aprender a jugar Go, ajedrez y shogi (ajedrez japonés) sin datos de entrenamiento humanos.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/I0zqbO622rg">How Magnus Carlsen Learned From AlphaZero</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alphastar">12.3. AlphaStar</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>En 2019, DeepMind presentó AlphaStar, un sistema de inteligencia artificial capaz de jugar al juego de estrategia en tiempo real StarCraft II a nivel de los mejores jugadores humanos.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/UuhECwm31dM">AlphaStar - The inside story</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alphafold">12.4. AlphaFold</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>En 2020, DeepMind presentó AlphaFold, un sistema de inteligencia artificial para la predicción de la estructura de proteínas.</p>
+</li>
+<li>
+<p>AlphaFold demostró una capacidad sin precedentes para predecir la estructura tridimensional de las proteínas, un avance significativo en la biología computacional.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://youtube.com/playlist?list=PLqYmG7hTraZAhkAh72kzzLC4r2O4VoVgz">AlphaFold en YouTube</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gnome">12.5. GNoMe</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>En 2023, DeepMind presentó GNoMe, un modelo que permite predecir materiales con propiedades específicas a partir de su estructura atómica y estructuras cristalinas.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/">Millions of new materials discovered with deep learning</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-03-26 14:55:05 +0100
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+= Inteligencia artificial
+:toc: 
+:toc-title: Índice de contenidos
+:sectnums:
+:toclevels: 3
+:source-highlighter: coderay
+
+== Introducción
+
+La inteligencia artificial (IA) es la inteligencia exhibida por máquinas. En ciencias de la computación, una máquina "inteligente" ideal es un agente racional flexible que percibe su entorno y lleva a cabo acciones que maximicen sus posibilidades de éxito en algún objetivo o tarea. Coloquialmente, el término inteligencia artificial se aplica cuando una máquina imita las funciones "cognitivas" que los humanos asocian con otras mentes humanas, como "aprender" y "resolver problemas".
+
+=== ¿Qué es realmente la Inteligencia Artificial?
+
+Para entender la IA desde una perspectiva pedagógica, podemos dividirla en tres dimensiones fundamentales que explican cómo una máquina "piensa":
+
+* **Percepción**: Es la capacidad de la máquina para recibir datos del mundo exterior y "entenderlos". Esto incluye desde leer un texto o escuchar una voz, hasta identificar objetos en una imagen. No es solo recibir datos, sino interpretarlos (ej: una cámara ve píxeles, la IA ve un "gato").
+* **Razonamiento y Toma de Decisiones**: Una vez que la máquina percibe la información, utiliza algoritmos para procesarla y decidir cuál es la mejor acción. Este proceso intenta imitar la lógica humana, evaluando probabilidades y posibles resultados para cumplir un objetivo (ej: un coche autónomo decide frenar porque percibe un peatón).
+* **Aprendizaje (Adaptación)**: Quizás el componente más importante. La IA moderna no se programa con reglas fijas para todo ("si pasa A, haz B"), sino que **aprende de la experiencia**. Al analizar miles de ejemplos, el sistema ajusta sus parámetros internos para mejorar su precisión con el tiempo.
+
+==== La Metáfora del Aprendiz
+Podemos imaginar la IA como un aprendiz con una memoria fotográfica infinita pero sin sentido común inicial. Si le mostramos 10,000 fotos de manzanas, eventualmente entenderá el patrón de lo que es una manzana. Si luego le mostramos una pera, fallará, pero al corregirlo y darle el nuevo dato, su "modelo" se refinará.
+
+=== Clasificación de la IA por su alcance
+
+Existen dos categorías principales que ayudan a entender el estado actual de la tecnología:
+
+1.  **IA Débil o Estrecha (ANI - Artificial Narrow Intelligence)**: Es la IA que utilizamos hoy en día. Está diseñada para realizar una tarea específica de forma excelente (ej: jugar al ajedrez, traducir un texto, recomendar una película). No tiene conciencia ni puede realizar tareas fuera de su dominio.
+2.  **IA Fuerte o General (AGI - Artificial General Intelligence)**: Es un concepto teórico (aún no alcanzado) donde la máquina alcanzaría una inteligencia igual o superior a la humana en **cualquier** tarea cognitiva. Tendría la capacidad de razonar de forma abstracta, tener autoconciencia y aprender cualquier disciplina sin entrenamiento específico previo.
+
+== Historia
+
+El término "inteligencia artificial" fue acuñado por John McCarthy en 1956, en la conferencia de Dartmouth College, Massachusetts. La inteligencia artificial es un campo de estudio multidisciplinario que busca, mediante el uso de modelos computacionales, el desarrollo de sistemas que puedan realizar tareas que, de momento, requieren inteligencia humana para ser realizadas. La inteligencia artificial es una rama de la informática que se ocupa de la creación de programas y mecanismos que pueden mostrar comportamientos que podrían considerarse inteligentes.
+
+=== Evolución del Pensamiento sobre la IA
+
+Para entender la historia de la IA de forma didáctica, debemos verla como una transición entre dos grandes filosofías:
+
+* **IA Simbólica (Top-Down)**: Dominó desde los años 50 hasta los 80. Se basaba en la idea de que la inteligencia consiste en manipular símbolos y reglas lógicas. Si podíamos escribir suficientes reglas `SI... ENTONCES...`, la máquina sería inteligente. 
+** *Ejemplo*: Los sistemas expertos médicos de los años 70.
+* **IA Conexionista (Bottom-Up)**: Es el enfoque dominante actual. En lugar de darle reglas a la máquina, le damos una estructura inspirada en el cerebro (redes neuronales) y muchos datos para que ella misma descubra las reglas. 
+** *Ejemplo*: El reconocimiento de voz de tu teléfono.
+
+=== Las Etapas de la IA
+
+La historia de la IA no ha sido un crecimiento lineal, sino que ha pasado por periodos de gran optimismo seguidos de "inviernos" por falta de resultados:
+
+1.  **El Nacimiento (1950-1956)**: Alan Turing publica "¿Pueden las máquinas pensar?" y propone el famoso **Test de Turing**. Se establecen las bases matemáticas.
+2.  **La Era Dorada del Optimismo (1956-1974)**: Se crean los primeros programas capaces de resolver problemas de álgebra y demostrar teoremas geométricos. Se creía que en 20 años las máquinas harían cualquier trabajo humano.
+3.  **El Primer Invierno de la IA (1974-1980)**: El optimismo choca con la realidad del hardware limitado. El informe Lighthill en el Reino Unido critica la falta de avances reales, lo que provoca un recorte masivo de fondos.
+4.  **El Auge de los Sistemas Expertos (1980-1987)**: Las empresas empiezan a usar la IA para organizar la logística y diagnósticos médicos basados en reglas.
+5.  **El Segundo Invierno (1987-1993)**: Los sistemas expertos resultan ser difíciles de mantener y actualizar. El hardware especializado (máquinas Lisp) fracasa comercialmente.
+6.  **La Revolución del Big Data y Deep Learning (2010-Presente)**: Gracias a la potencia de las GPUs y la inmensa cantidad de datos en internet, las redes neuronales profundas demuestran una eficacia asombrosa, llevándonos a los LLMs actuales.
+
+== Hitos en la Historia de la IA
+
+Para comprender la evolución de la IA, es fundamental analizar los momentos en que las máquinas superaron barreras que se creían exclusivas del intelecto humano. Aquí detallamos los hitos más significativos:
+
+* **1956: El Nacimiento Oficial**: John McCarthy acuña el término "inteligencia artificial" en la conferencia de Dartmouth College. Este evento reunió a los pioneros para discutir la posibilidad de que "cada aspecto del aprendizaje o cualquier otra característica de la inteligencia pueda, en principio, ser descrito con tanta precisión que una máquina pueda ser construida para simularlo".
+* **1958: Lógica simbólica**: Herbert Simon y Allen Newell desarrollan el "Logic Theorist", considerado el primer programa de IA, capaz de demostrar teoremas matemáticos complejos usando reglas lógicas.
+* **1965: El primer Chatbot**: Joseph Weizenbaum crea **ELIZA**, un programa de procesamiento de lenguaje natural que simulaba a un psicoterapeuta. Aunque funcionaba con simples reglas de sustitución, demostró lo fácil que era para los humanos proyectar inteligencia en las máquinas (el "Efecto ELIZA").
+* **1997: El fin del ajedrez como reto supremo**: **Deep Blue** de IBM derrota al campeón mundial Garry Kasparov. Fue un hito técnico en potencia de cálculo y árboles de búsqueda, demostrando que la "fuerza bruta" algorítmica podía vencer a la intuición humana en juegos de reglas fijas.
+* **2011: Comprensión del contexto**: **IBM Watson** gana el concurso "Jeopardy!", venciendo a los mejores humanos en una tarea que requiere entender juegos de palabras, ironías y conocimientos generales masivos.
+* **2016: El triunfo de las Redes Neuronales**: **AlphaGo** de DeepMind derrota a Lee Sedol en el juego Go. A diferencia del ajedrez, el Go tiene tantas posibilidades que no se puede vencer por fuerza bruta; AlphaGo aprendió "intuición" mediante el aprendizaje por refuerzo y redes neuronales.
+* **2020: IA al servicio de la ciencia**: **AlphaFold** resuelve el problema del plegamiento de proteínas, algo que los biólogos llevaban décadas intentando. Es el primer gran ejemplo de IA acelerando descubrimientos científicos fundamentales.
+* **2021: La era de los Modelos de Lenguaje**: Se lanza **GPT-3** de OpenAI. Con 175 mil millones de parámetros, demostró que escalar el tamaño de los modelos y los datos permitía capacidades emergentes como programar código, escribir poesía y razonar lógicamente sin entrenamiento específico para cada tarea.
+* **2023: Ciencia de Materiales**: **GNoMe** (DeepMind) predice estructuras estables para 2.2 millones de nuevos materiales, multiplicando por 10 el conocimiento humano acumulado en toda la historia de la ciencia de materiales.
+
+
+== Primeras Técnicas Utilizadas en IA
+
+Para entender el estado actual de la IA, es vital comprender las técnicas "clásicas" que sentaron las bases. Estas técnicas se centraban más en la lógica humana explícita que en el aprendizaje de datos masivos.
+
+=== Lógica y Reglas Heurísticas
+
+Se basan en representar el conocimiento mediante reglas formales. Una **heurística** es un "atajo mental" o regla práctica que ayuda a resolver problemas de manera más rápida que una búsqueda exhaustiva, aunque no garantice la solución óptima.
+* **Concepto pedagógico**: Es como darle a un ordenador un manual de instrucciones extremadamente detallado. Si el manual dice "Si hay nubes negras y viento frío, entonces hay un 80% de probabilidad de lluvia", el ordenador simplemente sigue esa instrucción lógica.
+
+=== Árboles de Búsqueda y Algoritmos de Búsqueda
+
+Consisten en visualizar un problema como un mapa de ramificaciones (nodos). Los algoritmos exploran estas ramas para encontrar el camino más corto o eficiente hacia una solución.
+* **Búsqueda en Anchura (BFS)**: Explora todos los vecinos inmediatos antes de profundizar. Es como buscar unas llaves perdidas revisando primero toda una habitación antes de pasar a la siguiente.
+* **Búsqueda en Profundidad (DFS)**: Sigue una rama hasta el final antes de retroceder. Es como intentar salir de un laberinto siguiendo una pared sin despegarse de ella.
+
+=== Redes Neuronales Artificiales (ANN - Siglo XX)
+
+Aunque hoy son la base del Deep Learning, las primeras versiones (como el **Perceptrón** de 1958) eran extremadamente simples. Se inspiraban en la biología pero solo podían resolver problemas "linealmente separables" (problemas muy básicos de clasificación).
+* **Limitación histórica**: En 1969, un libro de Minsky y Papert demostró que estas redes no podían resolver problemas lógicos simples como la función XOR, lo que contribuyó al primer "Invierno de la IA".
+
+=== Sistemas Expertos
+
+Fueron la primera aplicación comercial exitosa de la IA. Consisten en una **Base de Conocimientos** (datos de expertos humanos) y un **Motor de Inferencia** (el software que aplica la lógica).
+* **Ejemplo Clásico**: **MYCIN** (1970s), un sistema diseñado para identificar bacterias que causan infecciones graves y recomendar antibióticos. A menudo superaba a los médicos novatos en precisión diagnóstica.
+
+=== Programación Simbólica y Lisp
+
+Se diferencia de la programación tradicional en que manipula símbolos y conceptos en lugar de solo números. El lenguaje **Lisp** (List Processing), creado por John McCarthy, permitió crear programas que podían "modificarse a sí mismos", facilitando la creación de prototipos de inteligencia artificial.
+
+=== Teoría de Juegos y Planificación
+
+Se centra en agentes que deben tomar decisiones estratégicas contra oponentes. El algoritmo **Minimax**, por ejemplo, permite que un ordenador juegue al ajedrez intentando minimizar la pérdida máxima posible, asumiendo que el oponente también jugará de forma óptima.
+
+=== Aprendizaje Automático Simbólico
+
+Surgió del deseo de que la máquina no solo siguiera reglas, sino que las **extrajera**. El aprendizaje inductivo permitía que el sistema, al ver mil ejemplos de facturas aprobadas, generara por sí solo la regla: "Si el importe es menor de 100€, aprobar automáticamente".
+
+== Diferencia entre Machine Learning y Deep Learning
+
+=== Machine Learning (ML)
+
+El Machine Learning se refiere a un conjunto de técnicas que permiten a los ordenadores aprender patrones o realizar tareas específicas sin ser explícitamente programadas para ello.
+
+Se basa en algoritmos que pueden aprender de datos y hacer predicciones o tomar decisiones basadas en esos datos. Estos algoritmos pueden ser supervisados, no supervisados o de aprendizaje por refuerzo.
+
+Ejemplos de técnicas de Machine Learning incluyen regresión lineal, árboles de decisión, máquinas de vectores de soporte (Support Vector Machines), k-means clustering, entre otros.
+
+En términos de arquitectura, los modelos de Machine Learning pueden tener una o unas pocas capas, pero no son tan profundas o complejas como las redes neuronales profundas utilizadas en Deep Learning.
+
+=== Deep Learning (DL)
+
+El Deep Learning es una subárea del Machine Learning que se centra en el uso de algoritmos basados en redes neuronales artificiales con múltiples capas (a menudo muchas capas) para modelar y procesar datos.
+
+Estas redes neuronales profundas están compuestas por múltiples capas de nodos interconectados que procesan la información de manera jerárquica, extrayendo características complejas de los datos de entrada.
+
+El Deep Learning se ha vuelto muy popular y efectivo en áreas como el reconocimiento de imágenes, el procesamiento del lenguaje natural, la visión por computadora y otros problemas de percepción.
+
+A diferencia de muchas técnicas de Machine Learning tradicionales, el Deep Learning requiere grandes cantidades de datos de entrenamiento y potencia computacional para ajustar correctamente los muchos parámetros de las redes neuronales profundas.
+
+
+== Tipos de Redes Neuronales
+
+=== Redes Neuronales Artificiales (ANN)
+
+Son la forma más básica de redes neuronales, conocidas técnicamente como _Multi-Layer Perceptron_ (MLP). Se basan en la conexión de unidades de procesamiento (neuronas) organizadas en capas jerárquicas.
+
+==== La Estructura de Capas: Conceptos Pedagógicos
+
+Para entender cómo fluye la información, podemos visualizar el modelo como un sistema de filtrado y reconocimiento:
+
+* **Capa de Entrada (Input Layer)**: Es la interfaz con el mundo exterior. Cada neurona aquí representa una característica del dato original.
+** _Ejemplo_: Si clasificamos casas, una neurona recibe el "número de habitaciones", otra los "metros cuadrados" y otra la "antigüedad".
+* **Capas Ocultas (Hidden Layers)**: Aquí es donde reside la "inteligencia". Las neuronas en estas capas no ven los datos directamente, sino combinaciones de los datos previos. Su función es encontrar **patrones abstractos**.
+** _Ejemplo_: Una capa oculta puede combinar "antigüedad" y "metros cuadrados" para inferir el "estado de conservación", un concepto que no estaba explícito en la entrada.
+** **Profundidad**: Cuantas más capas ocultas tiene una red, más complejo es el conocimiento que puede extraer (de ahí el término _Deep_ Learning).
+* **Capa de Salida (Output Layer)**: Traduce los patrones internos en una respuesta útil.
+** _Ejemplo_: El precio estimado de la casa o una clasificación (ej: "Es una mansión" vs "Es un piso").
+
+==== ¿Cómo "Aprende" una Neurona?
+
+Cada conexión entre neuronas tiene un **Peso (Weight)** asociado. El aprendizaje consiste en ajustar estos pesos:
+1.  **Propagación hacia adelante (Forward Pass)**: Los datos viajan de la entrada a la salida. El modelo hace una "predicción" inicial (probablemente errónea).
+2.  **Cálculo del Error (Loss Function)**: Comparamos la predicción con la realidad.
+3.  **Retropropagación (Backpropagation)**: El error se envía hacia atrás por la red. Los pesos que más contribuyeron al error se ajustan ligeramente mediante un algoritmo llamado **Gradiente Descendente**.
+
+==== Limitaciones Didácticas
+Las ANN son potentes para datos tabulares (hojas de cálculo), pero ineficientes para datos espaciales (imágenes) o secuenciales (texto), lo que llevó a la creación de arquitecturas especializadas como las CNN y RNN.
+
+=== Redes Neuronales Convolucionales (CNN)
+
+Especialmente diseñadas para procesar datos con estructura de cuadrícula, como imágenes. Utilizan operaciones de convolución para extraer características importantes de los datos de entrada.
+
+==== Conceptos Pedagógicos: "La Mirada Fragmentada"
+
+Para entender cómo una CNN "ve" una imagen, debemos olvidar cómo la vemos los humanos (como un todo) y pensar en cómo la procesa un ordenador (como una matriz de números).
+
+* **Filtros (Kernels)**: Imagina que miras una fotografía a través de una pequeña mirilla cuadrada que solo deja ver un área de 3x3 píxeles. Esta mirilla es el **filtro**. El filtro se desliza por toda la imagen buscando patrones específicos: líneas verticales, bordes horizontales o curvas.
+* **Mapas de Características**: Cada vez que el filtro encuentra lo que busca (por ejemplo, una línea), "se ilumina" y genera un nuevo mapa.
+* **Jerarquía de Reconocimiento**:
+1.  **Primeras Capas**: Detectan cosas simples como bordes y colores.
+2.  **Capas Intermedias**: Combinan los bordes para detectar formas (círculos, cuadrados).
+3.  **Capas Profundas**: Combinan formas para detectar objetos complejos (ojos, ruedas, orejas de gato).
+
+==== Operaciones Clave
+
+* **Convolución**: Es el acto de deslizar el filtro y calcular la coincidencia. Es lo que permite la **invariancia de traslación**: la IA reconocerá un gato tanto si está en la esquina superior izquierda de la foto como en el centro.
+* **Pooling (Submuestreo)**: Es una técnica de compresión. Reduce el tamaño de la imagen quedándose solo con la información más importante (el "resumen" de cada zona), lo que hace al modelo más rápido y menos sensible a pequeños ruidos.
+* **Capa Totalmente Conectada (Flattening)**: Al final del proceso, todas las características extraídas se "estiran" en una fila de números que se pasan a una ANN clásica para que tome la decisión final: "¿Es un perro o un gato?".
+
+Las CNN son capaces de capturar patrones espaciales y de escala en las imágenes, lo que las hace muy efectivas en tareas de visión artificial, como la clasificación de imágenes, la detección de objetos y la segmentación semántica.
+
+=== Redes Neuronales Recurrentes (RNN)
+
+Son adecuadas para datos de secuencia, como texto o series temporales. Tienen conexiones de retroalimentación que les permiten mantener y usar información a lo largo del tiempo.
+
+==== Conceptos Pedagógicos: "La Memoria del Presente"
+
+Mientras que las ANN ven cada entrada como un evento aislado (sin pasado ni futuro), las RNN introducen el concepto de **tiempo**.
+
+* **La Bucle de Retroalimentación**: Imagina que estás leyendo un libro. Para entender la quinta palabra de una frase, debes recordar las cuatro anteriores. Una RNN tiene una memoria interna que "pasa" el estado actual al siguiente paso de tiempo.
+* **Secuencia de Pensamiento**: El modelo procesa la información en orden (palabra por palabra, segundo a segundo). Es como una cinta transportadora que se va llenando de contexto a medida que avanza.
+* **Aplicación Natural**: Son ideales para el lenguaje humano (donde el orden de las palabras cambia el significado) o para predecir el mercado de valores basándose en días pasados.
+
+==== El Talón de Aquiles: El Olvido
+
+El problema principal de las RNN es el **desvanecimiento del gradiente** (_Vanishing Gradient_). 
+* **Metáfora**: Es como jugar al teléfono escacharrado (teléfono roto). Al llegar a la palabra 50 de una frase, el modelo apenas "recuerda" la primera. La señal del error se vuelve tan débil al viajar hacia atrás por la secuencia que la red deja de aprender relaciones a largo plazo.
+
+Originalmente, las RNN fueron útiles en tareas como el procesamiento del lenguaje natural, la traducción automática, la generación de texto y la predicción de series temporales. En la actualidad, han sido reemplazadas en muchos casos por las redes neuronales LSTM y transformers.
+
+=== Redes Neuronales Long Short-Term Memory (LSTM)
+
+Una variante de las RNN diseñada para manejar problemas de desvanecimiento del gradiente. Las LSTM tienen unidades de memoria especiales que pueden aprender y recordar a largo plazo.
+
+==== Conceptos Pedagógicos: "El Archivista Selectivo"
+
+Si una RNN convencional es como una persona que intenta recordar una frase larga pero se olvida del principio, una LSTM es como un **archivista** con un sistema de carpetas muy eficiente.
+
+*   **La Celda de Memoria (Cell State)**: Es como una cinta transportadora que recorre toda la secuencia. En ella se guarda la información importante a largo plazo.
+*   **Las "Puertas" (Gates)**: Son los mecanismos que deciden qué entra y qué sale de la memoria:
+1.  **Puerta de Olvido (Forget Gate)**: Decide qué información ya no es útil y debe borrarse. _Ejemplo_: Si el texto cambia de hablar de un "niño" a una "niña", la puerta de olvido borra el género masculino de la memoria.
+2.  **Puerta de Entrada (Input Gate)**: Decide qué nueva información merece ser guardada en la cinta transportadora.
+3.  **Puerta de Salida (Output Gate)**: Decide qué parte de la memoria interna se enviará a la siguiente neurona.
+
+==== ¿Por qué son mejores?
+Gracias a estas puertas, las LSTM pueden mantener información relevante durante miles de pasos (palabras, segundos, días), resolviendo el problema del "olvido" de las RNN básicas.
+
+Las LSTM son ampliamente utilizadas en tareas de procesamiento del lenguaje natural, como la traducción automática, la generación de texto y la generación de subtítulos de imágenes.
+
+
+=== Redes Neuronales Generativas Adversarias (GAN)
+
+Consisten en dos redes neuronales, un generador y un discriminador, que compiten entre sí. El generador crea datos nuevos que intentan pasar como datos reales, mientras que el discriminador intenta distinguir entre los datos reales y los generados.
+
+==== Conceptos Pedagógicos: "El Falsificador y el Detective"
+
+La magia de las GAN reside en el **entrenamiento adversarial** (por competencia). Podemos imaginarlo como un duelo constante:
+
+*   **El Generador (El Falsificador)**: Su único objetivo es crear billetes (o caras, o cuadros) que parezcan reales. Empieza creando ruido aleatorio, pero mejora con cada intento.
+*   **El Discriminador (El Detective)**: Recibe tanto billetes reales como las falsificaciones del generador. Su trabajo es aprender a distinguirlos.
+*   **El Bucle de Mejora**: 
+1.  Si el Detective pilla al Falsificador, el Falsificador aprende de sus errores para mejorar la siguiente versión.
+2.  Si el Falsificador engaña al Detective, el Detective debe esforzarse más por encontrar nuevos detalles que revelen la mentira.
+
+Al final del proceso, el Generador se vuelve tan experto que es capaz de crear imágenes de personas que no existen pero que son indistinguibles de una fotografía real.
+
+Las GAN supusieron un gran avance en la generación de datos realistas y se utilizan en tareas de generación de imágenes, video y audio, así como en la mejora de la calidad de las imágenes y la generación de datos sintéticos.
+
+
+=== Redes Neuronales Autoencoder
+
+Utilizadas para el aprendizaje no supervisado, comprimen los datos de entrada en un espacio de representación más pequeño y luego los reconstruyen. Pueden ser utilizadas para la reducción de dimensionalidad, la generación de datos y la detección de anomalías.
+
+==== Conceptos Pedagógicos: "El Resumen Ejecutivo"
+
+Un Autoencoder es como un traductor que debe pasar un libro entero a un post-it y luego, basándose solo en ese post-it, reconstruir el libro original.
+
+*   **Encoder (Compresión)**: Toma una entrada compleja (ej: una foto de 1MB) y la reduce a un pequeño vector de números (ej: 100 números). Esta versión comprimida se llama **Espacio Latente (Bottleneck)**.
+*   **Decoder (Reconstrucción)**: Intenta convertir esos 100 números de nuevo en la imagen original de 1MB.
+*   **¿Para qué sirve?**: 
+** **Eliminación de Ruido**: Si le das una imagen con nieve, el modelo solo guardará lo importante en el "post-it", ignorando el ruido aleatorio al reconstruir.
+** **Detección de Anomalías**: Si el modelo está entrenado para comprimir fotos de tornillos perfectos, cuando vea un tornillo roto llegará al "post-it" pero no sabrá reconstruirlo bien. Esa diferencia delata que algo falla.
+
+=== Redes Neuronales Residuales (ResNet)
+
+Introducen conexiones de "salto" que permiten que las señales de entrada y salida se agreguen directamente entre capas. Esto facilita el entrenamiento de redes más profundas al evitar problemas de desvanecimiento del gradiente.
+
+=== Redes Neuronales Transformer
+
+Introducen un mecanismo de atención que permite a las redes neuronales procesar secuencias de datos de manera paralela y capturar relaciones a largo plazo entre elementos de la secuencia.
+
+Los transformers han demostrado ser muy efectivos en tareas de procesamiento del lenguaje natural, como la traducción automática, la generación de texto y la respuesta a preguntas.
+
+La gran ventaja de los transformers es su capacidad para capturar relaciones a largo plazo en las secuencias de datos, y permiten ser entrenados de manera más escalable y eficiente que modelos anteriores.
+
+==== Conceptos Pedagógicos Clave
+
+* **Mecanismo de Auto-Atención (Self-Attention)**: Es el "corazón" del Transformer. A diferencia de las redes anteriores que leían palabra por palabra (de izquierda a derecha), la auto-atención permite que cada palabra en una frase "mire" a todas las demás para entender su contexto. Por ejemplo, en la frase "El banco estaba cerrado porque no tenía dinero", el modelo usa la atención para saber que "banco" se refiere a una institución financiera y no a un mueble de parque.
+* **Procesamiento en Paralelo**: A diferencia de las RNN (Recurrentes), los Transformers no necesitan procesar el texto en orden secuencial. Pueden analizar todas las palabras de un párrafo simultáneamente, lo que permite aprovechar la potencia de las GPUs modernas y reducir drásticamente el tiempo de entrenamiento.
+* **Codificación Posicional (Positional Encoding)**: Como el modelo procesa todo a la vez, pierde el sentido del orden. Para solucionar esto, se añade una señal matemática a cada palabra que indica su posición exacta en la frase, permitiendo que el modelo distinga entre "El perro muerde al hombre" y "El hombre muerde al perro".
+* **Arquitectura Encoder-Decoder**: Originalmente diseñados con dos partes:
+** **Encoder**: Comprime la información de entrada en una representación numérica rica en significado.
+** **Decoder**: Utiliza esa representación para generar una secuencia de salida (como una traducción).
+** _Nota_: Modelos modernos como GPT usan solo la parte del Decoder, mientras que otros como BERT usan solo el Encoder.
+
+==== Impacto en la IA Moderna
+El artículo fundamental de 2017, *"Attention Is All You Need"*, marcó el inicio de la era de los Grandes Modelos de Lenguaje (LLMs). Gracias a esta arquitectura, hemos pasado de traductores que cometían errores gramaticales básicos a asistentes capaces de razonar, programar y mantener conversaciones complejas.
+
+=== Redes Neuronales de Difusión (Diffusion Models)
+
+Son un tipo de red neuronal generativa que modela la distribución de probabilidad de los datos de entrada. Han revolucionado la generación de imágenes y medios sintéticos, superando en muchos casos a las GAN en calidad y estabilidad.
+
+==== Conceptos Pedagógicos Clave
+
+* **El Proceso de Difusión**: Imagina que dejas caer una gota de tinta en un vaso de agua. Al principio está concentrada, pero con el tiempo se esparce hasta que el agua es solo un ruido uniforme de color. Los modelos de difusión funcionan igual:
+** **Difusión Directa (Forward)**: Toman una imagen clara y le añaden "ruido" (píxeles aleatorios) paso a paso hasta que la imagen es irreconocible.
+** **Difusión Inversa (Reverse)**: Aquí es donde ocurre la "magia". El modelo aprende a deshacer el camino, prediciendo cómo quitar el ruido paso a paso para recuperar la imagen original.
+* **Generación desde el Caos**: Para crear algo nuevo, le damos al modelo un bloque de ruido aleatorio puro. El modelo aplica lo aprendido en el proceso inverso para ir "esculpiendo" una imagen coherente a partir de ese ruido.
+* **Guiado por Texto (Conditioning)**: En modelos como _Stable Diffusion_ o _DALL-E_, el proceso de quitar ruido está guiado por una descripción textual. El modelo asegura que los píxeles que va recuperando coincidan con el significado del texto (ej: "un astronauta montando a caballo").
+* **Espacio Latente (Latent Diffusion)**: Para ahorrar potencia computacional, los modelos modernos no trabajan con píxeles gigantes, sino con una versión comprimida y matemática de la imagen llamada "espacio latente". Esto permite generar imágenes de alta resolución en segundos en lugar de horas.
+
+==== Comparativa Didáctica: GAN vs Difusión
+Mientras que una **GAN** es como un falsificador intentando engañar a un policía (competencia), un **Modelo de Difusión** es como un escultor que ve una figura dentro de un bloque de piedra (ruido) y va quitando lo que sobra hasta revelarla.
+
+=== Redes Neuronales de aprendizaje por refuerzo (RL)
+
+Se utilizan para entrenar agentes inteligentes que toman decisiones secuenciales en entornos dinámicos. Los agentes aprenden a maximizar una recompensa acumulada a lo largo del tiempo.
+
+El campo del aprendizaje por refuerzo ha experimentado un gran avance en los últimos años, con el desarrollo de algoritmos como DQN, A2C, PPO y DDPG, que han demostrado un rendimiento sobresaliente en tareas de control y juegos.
+
+
+== Tipos de modelos de IA
+
+=== Modelos de Aprendizaje Supervisado
+
+Los modelos de aprendizaje supervisado se entrenan con ejemplos de entrada y salida emparejados. El objetivo es aprender una función que mapee las entradas a las salidas.
+
+Ejemplos de modelos de aprendizaje supervisado incluyen regresión lineal, regresión logística, máquinas de vectores de soporte (SVM), árboles de decisión, bosques aleatorios, redes neuronales, entre otros.
+
+Estos modelos se utilizan en tareas como la clasificación, la regresión, la detección de anomalías y la generación de texto.
+
+=== Modelos de Aprendizaje No Supervisado
+
+Los modelos de aprendizaje no supervisado se entrenan con datos de entrada sin etiquetar. El objetivo es encontrar patrones, estructuras o relaciones interesantes en los datos.
+
+Ejemplos de modelos de aprendizaje no supervisado incluyen clustering, reducción de dimensionalidad, reglas de asociación y aprendizaje de densidad.
+
+Estos modelos se utilizan en tareas como la segmentación de clientes, la detección de fraudes, la recomendación de productos y la visualización de datos.
+
+=== Modelos de Aprendizaje por Refuerzo
+
+Los modelos de aprendizaje por refuerzo se entrenan con un sistema de recompensa y castigo. El objetivo es aprender una política que maximice la recompensa acumulada a lo largo del tiempo.
+
+Ejemplos de modelos de aprendizaje por refuerzo incluyen Q-learning, SARSA, DQN, A2C, PPO y DDPG.
+
+Estos modelos se utilizan en tareas como el control de robots, los juegos, la optimización de carteras y la toma de decisiones secuenciales.
+
+=== Modelos de Aprendizaje Semi-Supervisado
+
+Los modelos de aprendizaje semi-supervisado se entrenan con una combinación de datos etiquetados y no etiquetados. El objetivo es aprovechar la información no etiquetada para mejorar el rendimiento del modelo.
+
+Ejemplos de modelos de aprendizaje semi-supervisado incluyen la propagación de etiquetas, la autoetiquetación y la regularización de consistencia.
+
+Estos modelos se utilizan en tareas donde es costoso o difícil obtener grandes cantidades de datos etiquetados.
+
+=== Modelos de Aprendizaje por Transferencia
+
+Los modelos de aprendizaje por transferencia se entrenan en un dominio fuente y se aplican en un dominio objetivo relacionado. El objetivo es transferir el conocimiento aprendido en el dominio fuente al dominio objetivo.
+
+Ejemplos de modelos de aprendizaje por transferencia incluyen fine-tuning, pre-entrenamiento y adaptación de dominio.
+
+Los modelos de aprendizaje por transferencia se utilizan en tareas donde hay poca cantidad de datos en el dominio objetivo o donde el entrenamiento desde cero es costoso.
+
+== Modelos de IA pre-entrenados
+
+Los modelos de IA pre-entrenados son modelos que han sido entrenados en grandes conjuntos de datos y que se pueden utilizar directamente o ajustar para tareas específicas.
+
+.Conceptos Relacionados con Modelos de IA pre-entrenados
+* **Checkpoints (Puntos de control)**: Instantáneas guardadas del estado del modelo durante el proceso de entrenamiento en IA. Se utilizan para reanudar el entrenamiento o para realizar inferencias. En un checkpoint se guardan los pesos, los hiperparámetros y otros datos del modelo.
+* **Transfer Learning (Aprendizaje por transferencia)**: Técnica en la que un modelo entrenado para una tarea específica se reutiliza como punto de partida para entrenar otro modelo para una tarea relacionada o diferente.
+* **Hypernetworks (Hiperredes)**: Clase de modelos de redes neuronales utilizados para generar pesos o parámetros de otras redes neuronales. Se utilizan para aprender representaciones de datos o para generar arquitecturas de redes neuronales.
+* **Data Augmentation (Aumento de datos)**: Técnica para aumentar la cantidad y diversidad de datos de entrenamiento mediante transformaciones aleatorias o controladas.
+* **Adversarial Training (Entrenamiento adversarial)**: Técnica de entrenamiento para modelos generativos que implica entrenar simultáneamente un generador y un discriminador.
+* **Self-Attention (Autoatención)**: Mecanismo utilizado en arquitecturas de redes neuronales, especialmente en modelos de lenguaje como Transformers.
+* **Latent Space (Espacio latente)**: Espacio de representación de características latentes aprendidas por un modelo generativo.
+* **Fine-Tuning (Ajuste fino)**: Técnica de ajuste de un modelo pre-entrenado en un conjunto de datos específico para mejorar su rendimiento en una tarea específica.
+* **Inference (Inferencia)**: Proceso de utilizar un modelo entrenado para hacer predicciones sobre nuevos datos de entrada.
+
+
+== Principales Librerías de Inteligencia Artificial
+
+=== TensorFlow
+Desarrollada por Google, TensorFlow es una de las librerías más populares para construir y entrenar modelos de IA y DL. 
+
+La historia de TensorFlow comenzó en 2011 cuando el equipo de Google Brain comenzó a trabajar en una biblioteca de aprendizaje automático de código abierto llamada DistBelief. En 2015, Google lanzó TensorFlow como sucesor de DistBelief, y desde entonces se ha convertido en una de las librerías de IA y DL más utilizadas en la industria. La librería Keras, que se ha integrado en TensorFlow, proporciona una API de alto nivel para la construcción de redes neuronales.
+
+https://www.tensorflow.org[Enlace]
+
+=== PyTorch
+Desarrollada por Facebook, PyTorch es otra librería de IA y DL de código abierto muy popular.
+
+La historia de PyTorch comenzó en 2016 cuando Facebook lanzó PyTorch como una alternativa a TensorFlow. PyTorch se ha convertido en una de las librerías de IA y DL más utilizadas en la industria, especialmente en la investigación y el desarrollo de prototipos. 
+
+link:https://pytorch.org/[Enlace]
+
+=== Scikit-learn
+Scikit-learn es una librería de aprendizaje automático en Python que proporciona una amplia variedad de algoritmos de aprendizaje supervisado y no supervisado.
+
+link:https://scikit-learn.org/[Enlace]
+
+=== Keras
+Keras es una librería de alto nivel para la construcción de redes neuronales en Python que puede ejecutarse sobre TensorFlow, Theano o Microsoft Cognitive Toolkit (CNTK).
+
+link:https://keras.io/[Enlace]
+
+=== MXNet
+Desarrollada por Apache, MXNet es otra librería de código abierto para el desarrollo de modelos de IA y DL.
+
+link:https://mxnet.apache.org/[Enlace]
+
+=== Caffe
+Caffe es una librería de código abierto especialmente diseñada para la visión por computadora y la implementación eficiente de modelos de CNN.
+
+link:https://caffe.berkeleyvision.org/[Enlace]
+
+=== OpenCV
+OpenCV (Open Source Computer Vision Library) es una librería de visión por computadora de código abierto que incluye una amplia gama de algoritmos y herramientas.
+
+link:https://opencv.org/[Enlace]
+
+=== NLTK (Natural Language Toolkit)
+NLTK es una librería de Python para el procesamiento del lenguaje natural que proporciona herramientas y recursos para el análisis de texto.
+
+link:https://www.nltk.org/[Enlace]
+
+== Enlaces de Interés
+
+=== Conceptos Básicos de IA
+
+- https://es.wikipedia.org/wiki/Inteligencia_artificial[Inteligencia Artificial en Wikipedia]
+
+- https://www.ibm.com/cloud/learn/what-is-artificial-intelligence[Historia de la Inteligencia Artificial]
+
+- https://playground.tensorflow.org/[Tensorflow Playground]
+
+=== Empresas relevantes en IA
+
+- https://openai.com/[OpenAI]
+
+- https://deepmind.com/[DeepMind]
+
+- https://www.ibm.com/watson[IBM Watson]
+
+=== Plataformas y Comunidades
+
+- https://huggingface.co/[Hugging Face]
+
+- https://www.kaggle.com/[Kaggle]
+
+- https://ollama.com/[Ollama]
+
+- https://civitai.com/[Civit AI]
+
+=== Miscelánea
+
+- https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard[Open LLM Leaderboard]
+
+- https://www.kdnuggets.com/[KDnuggets]
+
+- https://www.arxiv.org/[arXiv]
+
+- https://www.paperswithcode.com/[Papers with Code]
+
+
+== Anexo 1: Modelos de IA Pre-entrenados
+
+=== Modelos generativos de lenguaje
+
+* **GPT-X (Generative Pre-trained Transformer X):** Un modelo de lenguaje generativo desarrollado por OpenAI que ha demostrado un rendimiento sobresaliente en una amplia variedad de tareas de procesamiento del lenguaje natural.
+
+* **link:https://llama.meta.com/[Llama]:** Un modelo de lenguaje generativo desarrollado por Meta que ha demostrado un rendimiento competitivo en tareas de generación de texto y conversación. A partir de este modelo, se han desarrollado multitud de variantes y modelos especializados ([llava], alpaca, llamacode, etc.).
+
+* **link:https://ollama.com/library/gemma[gemma]:** Un modelo de lenguaje generativo desarrollado por Google (Deepmind).
+
+* **link:https://docs.mistral.ai/[Mistral]:** Un modelo de lenguaje generativo desarrollado por Mistral. De Mistral han surgido variantes como Mixtral, Dolphin-Mixtral, etc.
+
+* **link:https://github.com/QwenLM/Qwen[Qwen]:** Un modelo de lenguaje generativo desarrollado por Alibaba.
+
+* **https://llava-vl.github.io/[Llava]:** Un modelo de lenguaje multimodal que combina texto y visión para tareas de detección de objetos en imágenes.
+
+=== Modelos generativos de imágenes
+
+* **link:https://openai.com/dall-e-2/[DALL-E 2]:** Un modelo generativo de imágenes desarrollado por OpenAI que puede generar imágenes a partir de descripciones textuales.
+
+* **link:https://www.midjourney.com/home[MidJourney]:** Un modelo generativo de imágenes desarrollado por MidJourney que puede generar imágenes realistas con discord como plataforma.
+
+* **link:https://stability.ai/stable-image[Stable Diffusion]:** Un modelo generativo de imágenes desarrollado por OpenAI que puede generar imágenes de alta calidad a partir de descripciones textuales.
+
+== Anexo 2: Hitos y Logros de DeepMind
+
+Deepmind es una empresa de inteligencia artificial con sede en Londres, fue fundada en 2010 y adquirida por Google en 2014. DeepMind ha logrado varios hitos y avances significativos en el campo de la inteligencia artificial, incluyendo:
+
+=== AlphaGo
+
+- En 2016, AlphaGo, desarrollado por DeepMind, derrotó al campeón mundial de Go, Lee Sedol, en una serie de juegos históricos. AlphaGo demostró la capacidad de las redes neuronales para dominar un juego complejo de estrategia, superando el nivel humano.
+
+link:https://youtu.be/WXuK6gekU1Y[AlphaGo - The Movie]
+
+=== AlphaZero
+
+- En 2017, DeepMind pReino Unido, que ha logrado varios hitos y avances significativos en el campo de la IA. A continuación se presentan algunos de los logros más destacados de DeepMind:resentó AlphaZero, un sistema de inteligencia artificial capaz de aprender a jugar Go, ajedrez y shogi (ajedrez japonés) sin datos de entrenamiento humanos.
+
+link:https://youtu.be/I0zqbO622rg[How Magnus Carlsen Learned From AlphaZero]
+
+=== AlphaStar
+
+- En 2019, DeepMind presentó AlphaStar, un sistema de inteligencia artificial capaz de jugar al juego de estrategia en tiempo real StarCraft II a nivel de los mejores jugadores humanos.
+
+link:https://youtu.be/UuhECwm31dM[AlphaStar - The inside story]
+
+=== AlphaFold
+
+- En 2020, DeepMind presentó AlphaFold, un sistema de inteligencia artificial para la predicción de la estructura de proteínas.
+- AlphaFold demostró una capacidad sin precedentes para predecir la estructura tridimensional de las proteínas, un avance significativo en la biología computacional.
+
+link:https://youtube.com/playlist?list=PLqYmG7hTraZAhkAh72kzzLC4r2O4VoVgz[AlphaFold en YouTube]
+
+
+=== GNoMe
+
+- En 2023, DeepMind presentó GNoMe, un modelo que permite predecir materiales con propiedades específicas a partir de su estructura atómica y estructuras cristalinas.
+
+link:https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/[Millions of new materials discovered with deep learning]
